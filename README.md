@@ -1,6 +1,5 @@
 # PyOpenNI, round II
 
-
 Yep, you guessed it, these are the fantastic, incredible **[OpenNI2][OpenNI2]
 bindings for the [Python][Python] scripting language**.
 
@@ -13,6 +12,11 @@ This makes PyOpenNI2 *really* easy to install, see [Installing][#installing].
 C++ API (in contrast to OpenNI1, which was a C API). 99% of the wrapper is
 contained in a single file, `wrapper.cc`.
 
+**Important:** OpenNI2 no longer provides an API to access middleware, see the
+[migration guide][migration_guide]. That means you need another binding to
+access NITE, for example. You can find middleware binding on [the wiki page]
+(https://github.com/jmendeth/PyOpenNI2/wiki/Middleware_Bindings).
+
 PyOpenNI2 is made available under a [2-clause BSD license]
 (http://opensource.org/licenses/BSD-2-Clause), see `LICENSE`.  
 Feedback? Problems? Want a feature? Did I chose an original name?  
@@ -21,6 +25,9 @@ or pull-request.
 
 
 ## Installing
+
+**Tip:** You may find instructions for your own platform on [the wiki]
+(https://github.com/jmendeth/PyOpenNI2/wiki); if not, you can follow these.
 
 You'll need:
 
@@ -34,23 +41,22 @@ You'll need:
 Now, just run the usual command:
 
 ```bash
-$ python setup.py install
+$ sudo -E python setup.py install
 ```
 
-You may need to run it with `sudo -E`.
 For more information about installing Python modules, look
 [here](http://docs.python.org/2/install/#standard-build-and-install).
 
 #### I have a problem in Windows that...
 
-**No.** Windows is like the *different one*, and it's intentional. Every other
+**No.** Windows is like the *different one*, and it's by design. Every other
 system follows the standards. I don't care supporting it (well, others may)
-because Microsoft hasn't made a single action to support me as a developer.
+because Microsoft hasn't made a single action to support us as developers.
 
-After that mini-rant, left to say is that you can search for people
-having the same problem, install MinGW, switch to another OS (it's
-worth the change) or file an issue. But in the latter, *don't expect
-much support*. What's more, the whole `distutils` doesn't support it.
+After that mini-rant, left to say is that you should switch to another OS
+(it's worth the change), or try searching for people having the same problem,
+installing MinGW, or file an issue. But in the latter, *don't expect much
+support*. What's more, the whole `distutils` doesn't support Windows.
 
 
 ## Usage
@@ -80,6 +86,8 @@ Also take a look at the `examples` directory.
   [OpenNI2]: https://github.com/OpenNI/OpenNI2     "OpenNI2 repository"
 [PyOpenNI]:  https://github.com/jmendeth/PyOpenNI  "PyOpenNI repository"
 [PyOpenNI2]: https://github.com/jmendeth/PyOpenNI2 "PyOpenNI2 repository"
+
+[migration_guide]: http://openni.org/openni-migration-guide "OpenNI migration guide"
 
 [c_api]: http://docs.python.org/2/c-api "Python/C API documentation"
 [BoostPython]: http://boost.org/libs/python "Boost::Python documentation"

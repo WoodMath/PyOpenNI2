@@ -11,7 +11,7 @@ bindings for the [Python][Python] scripting language**.
 This is a follow-up to [PyOpenNI][PyOpenNI], which binded the (now legacy)
 [OpenNI1][OpenNI]; this has been rewritten from scratch and uses Python's
 recommended way af building, [Distutils][distutils], instead of [CMake][CMake].
-This makes PyOpenNI2 *really* easy to install, see [Installing][#installing].
+This makes PyOpenNI2 *really* easy to install, see [Installing](#installing).
 
 [Boost::Python][BoostPython] *is the way to go* with OpenNI2, which is a
 C++ API (in contrast to OpenNI1, which was a C API). 99% of the wrapper is
@@ -58,10 +58,11 @@ For more information about installing Python modules, look
 system follows the standards. I don't care supporting it (well, others may)
 because Microsoft hasn't made a single action to support us as developers.
 
-After that mini-rant, left to say is that you should switch to another OS
-(it's worth the change), or try searching for people having the same problem,
-installing MinGW, or file an issue. But in the latter, *don't expect much
-support*. What's more, the whole `distutils` doesn't support Windows.
+After that mini-rant, left to say is that you should switch to another OS,
+like Linux (it's worth the change), or try searching for people having the
+same problem, installing MinGW, or file an issue. But in the latter, *don't
+expect much support*. What's more, the whole `distutils` doesn't support
+Windows.
 
 
 ## Usage
@@ -78,6 +79,7 @@ help system, but there's still a lot missing.
 ```python
 help(openni2)
 help(openni2.Device)
+help(openni2.Device.has_sensor)
 ```
 
 Also take a look at the `examples` directory.

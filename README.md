@@ -1,5 +1,10 @@
 # PyOpenNI, round II
 
+**Note:** Not usable yet. Work is being done in the `unstable` branch,  
+post your Pull Requests there. Don't report issues of the `master` branch!
+
+---
+
 Yep, you guessed it, these are the fantastic, incredible **[OpenNI2][OpenNI2]
 bindings for the [Python][Python] scripting language**.
 
